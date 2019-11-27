@@ -65,6 +65,7 @@
         display: flex;
         flex-flow: wrap;
         flex-direction: column;
+        margin-top: -1px;
 
         &--adress {
             color: $yellow_color;

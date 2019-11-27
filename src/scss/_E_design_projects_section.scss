@@ -21,6 +21,7 @@
 
     @media screen and (max-width: 375px) {
         background: $dark_color;
+        margin-top: -1px;
     
         &--header {
             margin: 0 auto 10px;
