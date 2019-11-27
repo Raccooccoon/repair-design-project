@@ -1,0 +1,41 @@
+@mixin intersection_header($color) {
+    font-family: $main_font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color;  
+}
+
+@mixin intersection_header_375($color) {
+    font-family: $main_font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color;  
+}
+
+@mixin intersection_text($color) {
+    margin: 20px auto 40px;
+    font-family: $text_font;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    width: 50%;
+    color: $color;     
+}
+
+@mixin intersection_text_375($color) {
+    margin: 20px auto 40px;
+    font-family: $text_font;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    width: 100%;
+    color: $color;     
+}

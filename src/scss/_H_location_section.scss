@@ -1,0 +1,130 @@
+.location {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                url("../assets/location-background.jpg");
+    height: 954px;
+   
+    &--adress {
+        color: $yellow_color;
+        font-family: $main_font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0 auto;
+        padding: 260px 0 20px 0;
+    }
+
+    &--vectors {
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        padding: 20px 0 20px 0;
+        
+        &-letter {
+            background: url("../assets/vectors/letter.svg");
+            height: 28px;
+            width: 28px;
+            border-radius: 50%;
+            margin: 0 0.5%;
+            cursor: pointer;
+            border: none;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &-camera {
+            background: url("../assets/vectors/camera.svg");
+            height: 28px;
+            width: 28px;
+            border-radius: 50%;
+            margin: 0 0.5%;
+            cursor: pointer;
+            border: none;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &--map {
+        background: url("../assets/map.jpg");
+        background-size: 100% 100%;
+        width: 65%;
+        height: 465px;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 375px) {
+        background: $dark_color;
+        height: 480px;
+        display: flex;
+        flex-flow: wrap;
+        flex-direction: column;
+
+        &--adress {
+            color: $yellow_color;
+            font-family: $main_font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 50px 32px 10px;
+            padding: 0;
+        }
+
+        &--vectors {
+            display: flex;
+            justify-content: center;
+            height: 50px;
+            padding: 20px 0 20px 0;
+
+            &-letter {
+                background: url("../assets/vectors/letter.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 39px;
+                width: 39px;
+                margin: 0 10px;
+                border-radius: 50%;
+                cursor: pointer;
+                border: none;
+                
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            &-camera {
+                background: url("../assets/vectors/camera.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 39px;
+                width: 39px;
+                margin: 0 10px;
+                border-radius: 50%;
+                cursor: pointer;
+                border: none;
+                
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        &--map {
+            background: url("../assets/map.jpg");
+            background-size: contain;
+            width: 340px;
+            height: 255px;
+            margin: 0 auto;
+            order: -1;
+        } 
+    }
+}

@@ -1,0 +1,361 @@
+@import "./O_mixins";
+
+.design_projects {
+    background: linear-gradient(to top, #131313 72%, #ffffff 28%);
+    
+    &--header {
+        margin: 150px auto 20px;
+        @include intersection_header($dark_color);
+    }
+
+    &--vector {
+        background: url("../assets/vectors/design-project.svg");
+        width: 114px;
+        height: 28px;
+        margin: 0 auto;
+    }
+
+    &--text {
+        @include intersection_text($dark_color);
+    }
+
+    @media screen and (max-width: 375px) {
+        background: $dark_color;
+    
+        &--header {
+            margin: 0 auto 10px;
+            @include intersection_header_375($white_color);
+        }
+    
+        &--vector {
+            background: url("../assets/vectors/design-project.svg");
+            width: 114px;
+            height: 28px;
+            margin: 0 auto;
+        }
+    
+        &--text {
+            @include intersection_text_375($white_color);
+            width: 290px;
+        }
+    }
+}
+
+.options_container {
+    display: flex;
+    width: 86%;
+    height: 710px;
+    margin: 0 auto;
+    justify-content: space-between;
+    
+    &--image {
+        height: 100%;
+        width: 32%;
+        position: relative;   
+    }
+
+    .mini {
+        background: url("../assets/redecorating.jpg");
+        background-size: 100% 421px;
+        background-repeat: no-repeat;
+    }
+
+    .standard {
+        background: url("../assets/designer.jpg");
+        background-size: 100% 421px;
+        background-repeat: no-repeat;
+    }
+
+    .full {
+        background: url("../assets/overhaul.jpg");
+        background-size: 100% 421px;
+        background-repeat: no-repeat;
+    }
+
+    &--info {
+        background: $white_color;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+        color: #959595;
+        font-family: $text_font;
+        font-size: 15px;
+        position: absolute;
+        margin: 290px 10% auto 10%;
+        height: auto;
+        width: 80%;
+        line-height: 25px;
+        
+        &--name {
+            color: #363636;
+            font-family: $main_font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            margin: 20px auto 0 7%;
+        }
+
+        &--list {
+            color: #959595;
+            font-family: $text_font;
+            font-size: 15px;
+            line-height: 25px;
+            margin: 5px auto 10px 0;
+        }
+
+        &--price {
+            background: $yellow_color;
+            box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+            color: $white_color;
+            font-family: $main_font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            height: 54px;
+            width: 60%;
+            min-width: 180px;
+            margin: auto auto -27px 0;
+            line-height: 54px;
+            text-transform: uppercase;
+            text-align: center;   
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        display: flex;
+        flex-direction: column;
+        width: 340px;
+        height: 1400px;
+        margin: 0 17.5px;
+        justify-content: space-between;
+        
+        &--image {
+            height: 365px;
+            width: 340px;
+            position: relative;   
+        }
+    
+        .mini {
+            background: url("../assets/redecorating.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    
+        .standard {
+            margin-top: -100px;
+            background: url("../assets/overhaul.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    
+        .full {
+            margin-top: -35px;
+            background: url("../assets/designer.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    
+        &--info {
+            background: $white_color;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+            color: #959595;
+            font-family: $text_font;
+            font-size: 15px;
+            position: absolute;
+            margin: 225px auto auto 0;
+            height: auto;
+            max-height: 241px;
+            width: 270px;
+            line-height: 25px;
+            
+            &--name {
+                color: #363636;
+                font-family: $main_font;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 21px;
+                margin: 20px auto 0 30px;
+            }
+    
+            &--list {
+                color: #959595;
+                font-family: $text_font;
+                font-size: 13px;
+                line-height: 22px;
+                margin: 5px auto 10px 5px;
+            }
+    
+            &--price {
+                background: $yellow_color;
+                box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+                color: $white_color;
+                font-family: $main_font;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                height: 40px;
+                width: 190px;
+                margin: auto auto -20px 0;
+                line-height: 40px;
+                text-transform: uppercase;
+                text-align: center;   
+            }
+        }
+
+    }
+}
+
+.steps_to_goal {
+    display: flex;
+    flex-wrap: wrap;
+    width: 86%;
+    height: 686px;
+    margin: -37px auto 0;
+    justify-content: space-between;
+    
+    &--info {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 27.4%;
+
+        &-how_we_are_working {
+            color: $white_color;
+            font-family: $header_font;
+            font-size: 15px;
+            line-height: 21px;
+            text-transform: uppercase;
+            margin: 0 auto 20px 0;
+        }
+
+        &-header {
+            color: $yellow_color;
+            font-family: $main_font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 27px;
+            line-height: 37px;
+            text-transform: uppercase;
+            margin: 0 auto 70px 0;
+        }
+
+        &-step_number {
+            color: $white_color;
+            font-family: $main_font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            text-transform: uppercase;
+            margin: 0 auto 20px 0;
+        }
+
+        &-step_name {
+            color: $yellow_color;
+            font-family: $main_font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 23px;
+            text-transform: uppercase;
+            margin: 0 auto 20px 0;    
+        }
+
+        &-text {
+            color: $white_color;
+            font-family: $text_font;
+            font-size: 15px;
+            line-height: 25px;
+            margin: 0 auto 80px 0;
+        }
+
+        &-slider {
+            display: flex;
+            width: 287px;
+            height: 14px;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+    }
+
+    &--list {
+        align-items: flex-end;
+        counter-reset: item;
+        display: flex;
+        flex-wrap: wrap;
+        width: 62%;
+        height: 178px;
+        padding: 0;
+        margin: 60px 0 auto;
+        list-style-type: none;
+        justify-content: space-between;
+        
+        &-item {
+            color: rgba(255, 255, 255, 0.3);
+            font-family: $text_font;
+            font-size: 15px;
+            width: 17%;
+            margin: 0 10%;
+            height: 50px;
+            line-height: 18px;
+            cursor: pointer;
+
+            &:before {
+                content: "0" counter(item) " ";
+                counter-increment: item;
+                color: rgba(255, 255, 255, 0.3);
+                display: block;
+                font-family: $main_font;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                height: 19px;
+                width: 15px;
+                line-height: 21px;
+                text-transform: uppercase;
+                text-decoration: underline;
+                margin-bottom: 10px; 
+                cursor: pointer;
+            }
+
+            &-current {
+                color: $white_color;
+
+                &:before {
+                    color: $white_color;
+                }
+            }
+
+            &:nth-child(3n + 1) {
+                margin-left: 0;
+            }
+
+            &:nth-child(3n + 3) {
+                margin-right: 0;
+            }
+
+            &:hover {
+                color: $white_color;
+
+                &:before {
+                    color: $white_color;   
+                }
+            }
+        }
+    }
+
+    &--image {
+        background: url("../assets/steps-to-goal.jpg");
+        background-size: 100% 377px; 
+        display: inline-block;
+        height: 377px;
+        width: 62%;
+        margin-top: -377px; 
+        margin-left: 38%;    
+    }
+
+    @media screen and (max-width: 375px) {
+        display: none;
+    }
+}
+ 

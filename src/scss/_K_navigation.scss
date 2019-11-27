@@ -1,0 +1,109 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    height: 83px;
+    width: 87.27%;
+    margin: 0 6.955% 0 5.772%;
+    min-width: 850px;
+
+    &--logo {
+        color: $yellow_color;
+        font-family: $header_font;
+        font-size: 14px;
+        margin: 23px 0 23px 0;
+        line-height: 37px;
+        vertical-align: middle;
+        text-transform: uppercase;
+        width: 15%;
+        overflow: hidden;
+    }
+
+    &--list {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px;
+        width: 47%;
+
+        &--item {
+            align-content: center;
+            margin: 0 0 0 0;
+            list-style-type: none;
+        }
+
+        &--link {
+            color: $white_color;
+            font-family: $navigation_font;
+            font-size: 13px;
+            line-height: 37px;
+            vertical-align: middle;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $yellow_color;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &--phone_number {
+        color: $yellow_color;
+        font-family: $header_font;
+        font-size: 14px;
+        margin: 23px 0 23px 0;
+        line-height: 37px;
+        vertical-align: middle;
+        text-transform: uppercase;
+        width: 115px; 
+    }
+
+    &--button {
+        color: $white_color;
+        font-family: $header_font;
+        font-size: 13px;
+        margin: 23px 0 23px 0;
+        padding: 13px 2.63%;
+        line-height: 11px;
+        vertical-align: middle;
+        text-transform: uppercase;
+        text-align: center;
+        width: 95px; 
+    }
+
+    @media screen and (max-width: 375px) {
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        width: 100%;
+        margin: 0;
+        min-width: 375px;
+    
+        &--logo {
+            color: $yellow_color;
+            font-family: $header_font;
+            font-size: 12px;
+            margin: 23px 18px;
+            line-height: 14px;
+            width: 176px;
+        }
+    
+        &--list {
+            display: none;
+        }
+    
+        &--phone_number {
+            color: $white_color;
+            font-size: 12px;
+            margin: 23px 18px 23px 18px;
+            line-height: 14px;
+            vertical-align: middle;
+            text-transform: uppercase;
+            width: 107px; 
+            text-decoration: none;
+        }
+    
+        &--button {
+            display: none;
+        }  
+    }
+}

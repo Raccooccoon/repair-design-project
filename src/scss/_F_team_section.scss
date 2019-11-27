@@ -1,0 +1,243 @@
+@import "./O_mixins";
+
+.team {
+    background: linear-gradient(to top, #ffffff 50%, #131313 50%);
+
+    &--header {
+        @include intersection_header($white_color);
+        padding-top: 30px;
+    }
+
+    &--vector {
+        background: url("../assets/vectors/our_team.svg");
+        width: 114px;
+        height: 28px;
+        margin: 0 auto;
+    }
+
+    &--text {
+        @include intersection_text($white_color);
+    }
+
+    &--about {
+        color: #363636;
+        font-family: $text_font;
+        font-size: 20px;
+        margin: 20px auto 40px;
+        width: 40%;
+        line-height: 34px;
+        text-align: center;   
+    }
+
+    @media screen and (max-width: 375px) {
+        background: $dark_color;
+
+        &--header {
+            @include intersection_header_375($white_color);
+            padding-top: 170px;
+        }
+    
+        &--vector {
+            background: url("../assets/vectors/our_team.svg");
+            width: 114px;
+            height: 28px;
+            margin: 0 auto;
+        }
+    
+        &--text {
+            @include intersection_text_375($white_color);
+            width: 340px;
+        }
+    
+        &--about {
+            display: none;
+        }   
+    }
+}
+
+.team_photos_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 74%;
+    height: 504px;
+        
+    &--image {
+        height: 100%;
+        width: 25%;
+        position: relative;
+        margin: 0 3%;
+    }
+
+    &--logo {
+        position: absolute;
+        height: 70px;
+        width: 70px;
+        left: -35px;
+        box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
+    }
+
+    &--info {
+        background: $white_color;
+        position: absolute;
+        margin: 290px 10% auto 10%;
+        height: auto;
+        width: 80%;
+        
+        &--name {
+            color: #181818;
+            font-family: $main_font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            margin: 20px auto 0 auto;
+            padding: 0 10px;
+            line-height: 25px;
+            text-align: center;
+        }
+
+        &--position {
+            color: #959595;
+            font-family: $text_font;
+            font-size: 18px;
+            margin: 5px auto 10px 0;
+            line-height: 26px;
+            text-align: center;
+        }
+
+        &--experience {
+            background: $yellow_color;
+            box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+            color: $white_color;
+            font-family: $main_font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            height: 44px;
+            width: 100%;
+            padding-top: 10%;
+            line-height: 22px;
+            text-transform: uppercase;
+            text-align: center;
+            vertical-align: middle;   
+        }  
+    }
+
+    @media screen and (max-width: 375px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+            
+        &--image {
+            height: 356px;
+            width: 304px;
+            position: relative;
+            margin: 40px 18px 110px 53px;
+        }
+    
+        &--logo {
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            left: -35px;
+            top: -35px;
+        }
+    
+        &--info {
+            background: $white_color;
+            position: absolute;
+            margin: 280px 10% auto 10%;
+            height: auto;
+            width: 80%;
+            
+            &--name {
+                color: #181818;
+                font-family: $main_font;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                margin: 20px auto 0 auto;
+                padding: 0 10px;
+                line-height: 25px;
+                text-align: center;
+            }
+    
+            &--position {
+                color: #959595;
+                font-family: $text_font;
+                font-size: 18px;
+                margin: 5px auto 10px 0;
+                line-height: 26px;
+                text-align: center;
+            }
+    
+            &--experience {
+                background: $yellow_color;
+                box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+                color: $white_color;
+                font-family: $main_font;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 13px;
+                height: 50px;
+                width: 100%;
+                padding-top: 0;
+                line-height: 50px;
+                text-transform: uppercase;
+                text-align: center;
+                vertical-align: middle;   
+            }  
+        }
+    }
+}
+
+.project_manager_photo {
+    background: url("../assets/project_manager_photo.jpg");
+    background-size: 100% 358px;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 375px) {
+        background-size: cover;
+    }
+}
+
+.designer_photo {
+    background: url("../assets/designer_photo.jpg");
+    background-size: 100% 358px;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 375px) {
+        background-size: cover;
+    }
+}
+
+.foreman_photo {
+    background: url("../assets/foreman_photo.jpg");
+    background-size: 100% 358px;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 375px) {
+        background-size: cover;
+    }
+}
+
+.project_manager_logo {
+    background: url("../assets/vectors/project_manager_logo.svg"), $yellow_color;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.designer_logo {
+    background: url("../assets/vectors/designer_logo.svg"), $yellow_color;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.foreman_logo {
+    background: url("../assets/vectors/foreman_logo.svg"), $yellow_color;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}

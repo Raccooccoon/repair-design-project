@@ -1,0 +1,136 @@
+@import "./O_mixins";
+
+.clients {
+    &--header {
+        @include intersection_header($dark_color);
+    }
+
+    &--vector {
+        background: url("../assets/vectors/our-clients.svg");
+        width: 114px;
+        height: 28px;
+        margin: 0 auto;    
+    }
+
+    &--text {
+        @include intersection_text($dark_color);
+    }
+
+    @media screen and (max-width: 375px) {
+        display: none;
+    }
+}
+
+.clients_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 86%;
+
+    &--section {
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+        width: 28%;
+        position: relative;
+        padding: 25px 2% 0 2%;
+    }
+
+    &--info {
+        display: flex;
+        flex-wrap: wrap;
+        position:relative;
+        justify-content: flex-start;
+    }
+
+    &--photo {
+        align-self: flex-end;
+        border-radius: 50%;
+        height: 76px;
+        width: 76px; 
+    }
+
+    &--name {
+        align-self: flex-end;
+        color: $dark_color;
+        font-family: $main_font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 23px;
+        margin: 0 auto 0 5%;
+        text-align: left;
+        width: 50%;
+        height: 60px;
+    }
+
+    &--feedback {
+        color: #959595;
+        font-family: $text_font;
+        font-size: 15px;
+        margin: 15px auto 10px 0;
+        padding: 0 0 55px 0;
+        line-height: 180%;
+        text-align: left;
+    }
+
+    &--coverage {
+        bottom: -27px;
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+        color: $white_color;
+        display: flex;
+        font-family: $main_font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        justify-content: space-between; 
+        line-height: 54px;
+        text-transform: uppercase;
+        text-align: right;
+        height: 54px;
+        margin-left: -7.5%;
+        min-width: 250px;
+        width: 80%;
+        padding: 0;
+        position: absolute;
+       
+        &-square {
+            background: url("../assets/vectors/square.svg") no-repeat 10% 50%, $yellow_color;
+            border-right: rgba(255, 255, 255, 0.7) 1px solid;
+            padding-right: 10%;
+            padding-left: 5%;
+            width: 35%;
+        }
+    
+        &-days {
+            padding-right: 5%;
+            padding-left: 5%;
+            width: 40%;
+            background: url("../assets/vectors/days.svg") no-repeat 10% 50%, $yellow_color;
+        } 
+    }  
+    
+    @media screen and (max-width: 375px) {
+        display: none;
+    }
+}
+
+.client_photo {
+    &-left {
+        background: url("../assets/client-photo-left.jpg");
+        background-position: 50% 50%;
+    }
+
+    &-middle {
+        background: url("../assets/client-photo-middle.jpg");
+        background-position: 50% 50%;
+    }
+
+    &-right {
+        background: url("../assets/client-photo-right.jpg");
+        background-position: 50% 50%;    
+    }
+
+    @media screen and (max-width: 375px) {
+        display: none;
+    }
+}
+    

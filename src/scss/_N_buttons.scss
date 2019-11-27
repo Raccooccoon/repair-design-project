@@ -1,0 +1,134 @@
+.yellow_button {
+  font-family: $text_font;
+  background: $yellow_color;
+  color: $white_color;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.white_button {
+  font-family: $text_font;
+  background: transparent;
+  color: $white_color;
+  border: 1px solid $white_color;
+  box-sizing: border-box;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.right_button {
+  position: absolute;
+  margin-top: 214px;
+  margin-left: 90%;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: none;
+  background: url("../assets/vectors/right-arrow.svg"), $yellow_color;
+  background-position: 55% 50%;
+  background-size: 20% 35%;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
+  z-index: 5;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .left_button {
+    position: absolute;
+    margin-top: 103px;
+    margin-left: 17.5px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    border: none;
+    background: url("../assets/vectors/left-arrow.svg"), $yellow_color;
+    background-position: 45% 50%;
+    background-size: 20% 35%;
+    background-repeat: no-repeat;
+    z-index: 5;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .right_button {
+    position: absolute;
+    margin-top: 103px;
+    margin-left: 290px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    border: none;
+    background: url("../assets/vectors/right-arrow.svg"), $yellow_color;
+    background-position: 55% 50%;
+    background-size: 20% 35%;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
+    z-index: 5;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.play_button {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background: url("../assets/vectors/polygon.svg"), $yellow_color;
+  background-repeat: no-repeat;
+  background-position: 55% 50%;
+  background-size: 20px 20px;
+  z-index: 10;
+  left: 45%;
+  top: 174.5px;
+  box-shadow: 0px 5px 30px rgba(227, 184, 115, 0.2);
+  cursor: pointer;
+  outline: 0;
+  outline-offset: 0;
+  border: 0;
+  padding: 0;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 375px) {
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background: url("../assets/vectors/polygon.svg"), $yellow_color;
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+    z-index: 10;
+    left: 151.5px;
+    top: 85px;
+    box-shadow: 0px 5px 30px rgba(227, 184, 115, 0.2);
+    outline: none;
+    padding: 0;
+    border: 0;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

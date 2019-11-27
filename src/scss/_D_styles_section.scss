@@ -1,0 +1,165 @@
+.styles_section {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                      url("../assets/styles-section-bkg.jpg");                  
+    height: 865px;
+    width: 100%;
+
+    &--grid_container {
+        display: grid;
+        grid-template-columns: 36% 29% 29%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 3%;
+        margin: 0 auto;
+        height: 100%;
+        width: 86%;
+    }
+
+    &--header {
+        align-self: center;
+        color: $yellow_color;
+        font-family: $main_font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 27px;
+        grid-column: 1;
+        grid-row: 1;
+        margin-top: 30px;
+        line-height: 37px;
+        text-transform: uppercase;    
+    }
+
+    &--list {
+        color: $white_color;
+        display: flex;
+        font-family: $text_font;
+        font-size: 20px;
+        flex-direction: column;
+        grid-column: 1;
+        grid-row: 2 / span 2;
+        padding: 0;
+        height: 516px;
+        margin-top: -50px;
+        line-height: 34px;
+        list-style: none;
+        justify-content: space-between;
+
+        &--item {
+            color: $white_color;
+            font-family: $text_font;
+            font-size: 20px;
+            line-height: 34px;
+            text-decoration: none;
+           
+            &:hover {
+                color: $yellow_color;
+                text-decoration: underline;
+                text-decoration-color: $yellow_color;
+            }
+        }
+    }
+
+    &--photo_clock {
+        background: url("../assets/styles-section-clock.jpg");
+        background-size: 100% 557px;
+        background-repeat: no-repeat;
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        margin-top: -40px;
+
+        .left_button, .right_button {
+            display: none;
+        }
+    }
+
+    &--photo_lounge {
+        background: url("../assets/styles-section-lounge.jpg");
+        background-size: 100% 275px;
+        background-repeat: no-repeat;
+        grid-column: 3;
+        grid-row: 1;
+        margin-top: -120px;
+        height: 275px;
+    }
+
+    &--photo_lamp {
+        background: url("../assets/styles-section-lamp.jpg");
+        background-size: 100% 350px;
+        background-repeat: no-repeat;
+        grid-column: 2;
+        grid-row: 3;
+        height: 350px;
+        margin-bottom: -40px;
+    }
+
+    &--photo_fare {
+        background: url("../assets/styles-section-table.jpg");
+        background-size: 100% 625px;
+        background-repeat: no-repeat;
+        grid-column: 3;
+        grid-row: 2 / span 2;
+        margin-top: -80px;
+        height: 625px;
+    }
+
+    @media screen and (max-width: 375px) {
+        background: linear-gradient(to top, $dark_color 161px, $white_color 121px);                  
+        height: 452px;
+        width: 100%;
+
+        &--grid_container {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 158px 272px;
+            margin: 50px auto 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        &--header {
+            text-align: center;
+            color: $yellow_color;
+            font-family: $main_font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            grid-column: 1;
+            grid-row: 1;
+            margin: 0 60px -30px;
+            line-height: 30px;
+            text-transform: uppercase;  
+            width: 255px;  
+        }
+
+        &--list {
+            display: none;
+        }
+
+        &--photo_clock {
+            background: url("../assets/styles-section-clock-375.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            grid-column: 1;
+            grid-row: 2;
+            margin: 0 17.5px;
+            width: 340px;
+            height: 242px;
+
+            .left_button, .right_button {
+                display: inline-block;
+            }
+        }
+
+        &--photo_lounge {
+            display: none;
+        }
+
+        &--photo_lamp {
+            display: none;
+        }
+
+        &--photo_fare {
+            display: none;
+        }
+
+    }
+}

@@ -1,0 +1,44 @@
+.arrow { 
+    &--left {
+        background: url("../assets/vectors/left-arrow.svg"), url("../assets/vectors/arrow-line.svg") 1px 5px;
+        background-repeat: no-repeat;
+        height: 14px; 
+        width: 42px;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+
+    &--right {
+        background: url("../assets/vectors/right-arrow.svg") 35px, url("../assets/vectors/arrow-line.svg") -1px 5px;
+        background-repeat: no-repeat; 
+        height: 14px; 
+        width: 42px;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+}
+
+.dot {
+    height: 14px; 
+    width: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+
+    &-current {
+        background: rgba(255, 255, 255, 1);
+    }
+
+    &:hover {
+        background: rgba(255, 255, 255, 1);
+        border-radius: 50%;
+        height: 14px; 
+        width: 14px;
+    }
+}

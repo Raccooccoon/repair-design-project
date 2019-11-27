@@ -1,0 +1,209 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 1438px;
+    min-width: 900px;
+    overflow: hidden; 
+    
+    @media screen and (max-width: 375px) {
+        margin: 0 0;
+        max-width: 375px;
+        min-width: 375px;
+    }
+}
+
+.header_section {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7),  rgba(0, 0, 0, 0.7)),
+    url("../assets/header-section-image.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 868px;
+    background-position: 80px 0px;
+    height: 868px;
+    width: 100%;
+
+    .scroll_button {
+        cursor: pointer;
+        position: absolute;
+        width: 13%;
+        min-width: 160px;
+        height: 97px;
+        background: $dark_color;
+        color: $white_color;
+        font-size: 14px;
+        font-family: $main_font;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 97px;
+        margin-top: 210px;
+        margin-left: 0px;
+        z-index: 5;
+        border: 0;
+
+        &:hover {
+            color: $yellow_color;
+        }
+    
+        &:after {
+            content: " ";
+            display: inline-block;
+            width: 29px;
+            height: 29px;
+            background-image: url("../assets/vectors/scroll_down.svg");
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7),  rgba(0, 0, 0, 0.7)),
+        url("../assets/header-section-image-375.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+        height: 526px;
+        width: 375px;
+
+        .scroll_button {
+            display: none;
+        }
+    }
+}
+
+.header {
+    background-color: $dark_color;
+    width: 100%; 
+}
+
+.separate_line {
+    display: block;
+
+    @media screen and (max-width: 375px) {
+        display: inline;
+    }
+}
+
+.hidden_375 {
+    @media screen and (max-width: 375px) {
+        display: none;
+    }
+}
+
+.we_in_instagram {
+    background-color: $dark_color;
+    color: $yellow_color;
+    display: inline-block;
+    font-family: $header_font;
+    font-size: 14px;
+    height: 84px;
+    width: 700px;
+    line-height: 84px;
+    text-align: center;
+    text-transform: uppercase;
+    transform: rotate(90deg) translate(308px, 308px);
+    text-decoration: none;
+    cursor: pointer;
+
+    &:after {
+        content: " ";
+        display: inline-block;
+        margin-left: 10px;
+        margin-bottom: 3px;
+        background-image: url("../assets/vectors/instagram-line.svg");
+        background-size: contain;
+        width: 51px;
+        height: 2px;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @media screen and (max-width: 375px) {
+        display: none;
+    }
+}
+
+.header_section_info {
+    margin-left: 83px;
+
+    &--location {
+        color: $white_color;
+        font-family: $main_font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        margin-left: 10%;
+        margin-top: 100px;
+        height: 105px;
+        width: 550px;
+        line-height: 53px;
+        text-transform: uppercase;
+
+        &-spanned {
+            color: $yellow_color;
+        }
+    }
+
+    &--cost {
+        color: $white_color;
+        font-family: $text_font;
+        font-size: 22px;
+        line-height: 30px;
+        margin-left: 10%;
+        margin-right: auto;
+        height: 89px;
+        width: 504px;
+    }
+
+    &--button {
+        display: inline-block;
+        font-size: 13px;
+        height: 51px;
+        width: 207px;
+        text-align: center;
+        text-transform: uppercase;
+        vertical-align: middle;
+        line-height: 51px;
+        padding: 18px auto;
+        margin-left: 10%;
+        margin-right: -9%;
+        margin-top: 10px;
+    }
+
+
+    @media screen and (max-width: 375px) {
+        margin-left: 0px;
+
+        &--location {
+            font-size: 23px;
+            margin: 85px 18px 16px 18px;
+            height: 60px;
+            width: 339px;
+            line-height: 23px;
+            text-transform: uppercase;  
+
+            &-spanned {
+                color: $yellow_color;
+            }
+        }
+
+        &--cost {
+            color: $white_color;
+            font-family: $text_font;
+            font-size: 18px;
+            line-height: 24px;
+            margin: 0 18px 20px 18px;
+            height: 94px;
+            width: 339px;
+
+        }
+
+        &--button {
+            font-size: 13px;
+            height: 51px;
+            width: 339px;
+            line-height: 51px;
+            padding: 18px auto;
+            margin: 13px 18px;
+        }
+    }
+}
